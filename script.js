@@ -15,6 +15,16 @@ async function main(){
 
     let allPortalBtn = await browser.findElements(wd.By.css('li.portal-hright.portal-vbot'));
 	await allPortalBtn[0].click();
+    // //////////////////////////////////////
+
+    // //////////// A-Z Index///////////////
+    await browser.wait(wd.until.elementLocated(wd.By.css('a[title="Wikipedia:Contents/A–Z index"]')));
+
+    let azIndexBtn = await browser.findElements(wd.By.css('a[title="Wikipedia:Contents/A–Z index"]'));
+	await azIndexBtn[0].click();
+    ///////////////////////////////////////
+
+    
 
 
 
