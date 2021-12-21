@@ -14,38 +14,42 @@ async function main(){
 	await englishLink[0].click();
 
     
-    /*---------------- All Portals -----------------*/
+    /*---------------- All Portals ---------------------------------*/
     await browser.wait(wd.until.elementLocated(wd.By.css('li.portal-hright.portal-vbot')));
 
     let allPortalBtn = await browser.findElements(wd.By.css('li.portal-hright.portal-vbot'));
 	await allPortalBtn[0].click();
     
-    /*----------------------------------------------*/
+    /*------------------------------------------------------------*/
 
-    /*-------------- A-Z Index ----------------------*/
+
+    /*-------------- A-Z Index -----------------------------------*/
     await browser.wait(wd.until.elementLocated(wd.By.css('a[title="Wikipedia:Contents/A–Z index"]')));
 
     let azIndexBtn = await browser.findElements(wd.By.css('a[title="Wikipedia:Contents/A–Z index"]'));
 	await azIndexBtn[0].click();
 
-    /*----------------------------------------------*/
+    /*------------------------------------------------------------*/
 
-    /*------------------- Clicking M ---------------*/
+
+    /*------------------- Clicking M ----------------------------*/
     await browser.wait(wd.until.elementLocated(wd.By.css('a[title="Special:AllPages/M"]')));
 
     let mLetterBtn = await browser.findElements(wd.By.css('a[title="Special:AllPages/M"]'));
 	await mLetterBtn[0].click();
-    /*----------------------------------------------*/
+    /*----------------------------------------------------------*/
 
-    /*--------------------Clicking M article---------*/
+
+    /*--------------------Clicking M article--------------------*/
     await browser.wait(wd.until.elementLocated(wd.By.css('.mw-allpages-chunk')));
 
     let mArtcile = await browser.findElements(wd.By.css('.mw-allpages-chunk li a'));
 	await mArtcile[0].click();
 
-    /*----------------------------------------------- */
+    /*--------------------------------------------------------- */
+    
 
-    /*--------------- Content ------------------------*/
+    /*--------------- Content Part------------------------------*/
 
     await browser.wait(wd.until.elementLocated(wd.By.css('table.wikitable + p')));
 
@@ -73,7 +77,7 @@ async function main(){
     fs.writeFileSync('Uses.txt', (usesPara));
     fs.writeFileSync('OtherUses.txt', (OtherUsesText));
 
-    /*--------------------------------------------- */
+    /*------------------------------------------------------ */
     
     browser.close();
 
